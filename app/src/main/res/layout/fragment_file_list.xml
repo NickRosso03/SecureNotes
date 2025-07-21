@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FileListFragment"> <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler_view_files"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:listitem="@layout/file_item"
+    android:padding="8dp"
+    android:clipToPadding="false"
+    android:scrollbarStyle="outsideOverlay" />
+
+    <TextView
+        android:id="@+id/text_view_no_files"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inizia_ad_aggiungere_file"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

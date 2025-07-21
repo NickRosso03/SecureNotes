@@ -1,0 +1,104 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.securenotesapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.securenotesapp"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            if (project.hasProperty('storeFile')) {
+                storeFile file(project.property('storeFile'))
+                storePassword project.property('storePassword')
+                keyAlias project.property('keyAlias')
+                keyPassword project.property('keyPassword')
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            shrinkResources false
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'
+        pickFirst '**/libjsc.so'
+    }
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == "release") {
+            variant.outputs.all { output ->
+                outputFileName = "SecureNotes.apk"
+            }
+        }
+    }
+}
+def keystoreProperties = new Properties()
+def keystoreFile = rootProject.file('keystore.properties')
+if (keystoreFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystoreFile))
+}
+ext.storeFile = keystoreProperties.getProperty('storeFile')
+ext.storePassword = keystoreProperties.getProperty('storePassword')
+ext.keyAlias = keystoreProperties.getProperty('keyAlias')
+ext.keyPassword = keystoreProperties.getProperty('keyPassword')
+
+dependencies {
+    // Android Support Libraries
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    // Security & Biometric
+    implementation libs.biometric
+    implementation libs.security.crypto
+
+    // Room Database (senza SQLCipher per ora)
+    implementation libs.room.runtime
+    implementation libs.room.ktx
+    annotationProcessor libs.room.compiler
+
+    // SQLCipher integration
+    implementation "net.zetetic:android-database-sqlcipher:4.5.4"
+    implementation "androidx.sqlite:sqlite:2.3.1"
+
+    // WorkManager per i backup
+    implementation "androidx.work:work-runtime:2.8.1"
+
+    // Testing
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    //
+    implementation 'androidx.preference:preference:1.2.1'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    // Per DocumentFile
+    implementation 'androidx.documentfile:documentfile:1.0.1'
+}

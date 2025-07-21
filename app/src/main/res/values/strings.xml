@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SecureNotesApp</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="app_version">Versione 1.0</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="note_title_hint">Titolo della nota</string>
+    <string name="note_content_hint">Contenuto della nota</string>
+    <string name="authentication_message">Autenticati per accedere a SecureNotes</string>
+    <string name="authenticate_now">Autentica ora</string>
+    <string name="pin_authentication">Autenticazione PIN</string>
+    <string name="pin_insert">Inserisci PIN</string>
+    <string name="pin_verify">Verifica PIN</string>
+    <string name="no_files_add_new">Nessun file presente. Aggiungine uno nuovo!</string>
+    <string name="add_new_note">Aggiungi una nuova nota</string>
+    <string name="add_new_file">Aggiungi un nuovo file</string>
+    <string name="ex_file_name">Nome del file di esempio.pdf</string>
+    <string name="ex_size">1.5 MB</string>
+    <string name="ex_timestamp">20/07/2025 10:30</string>
+    <string name="file_icon">File Icon</string>
+    <string name="nome_del_file_pdf">Nome del file.pdf</string>
+    <string name="_1_2_mb_2023_10_26">1.2 MB - 2023-10-26</string>
+    <string name="more_options">More options</string>
+    <string name="inizia_ad_aggiungere_file">Inizia ad aggiungere file!</string>
+    <string name="aggiungi_nuova_nota">Aggiungi nuova nota</string>
+    <string name="titolo_della_nota">Titolo della Nota</string>
+    <string name="anteprima_contenuto_nota">Anteprima del contenuto della nota...</string>
+    <string name="ex_date">2025-07-19 12:00</string>
+</resources>

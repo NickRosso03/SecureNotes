@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Directory interna per i file criptati -->
+    <files-path name="encrypted_files" path="encrypted_files/" />
+
+    <!-- Directory cache per file temporanei -->
+    <cache-path name="temp_files" path="temp/" />
+
+    <!-- Directory per backup -->
+    <files-path name="backup_files" path="backups/" />
+
+    <!-- Directory esterna (se necessaria per import/export) -->
+    <external-files-path name="external_files" path="." />
+</paths>
