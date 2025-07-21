@@ -5,7 +5,7 @@ L'obiettivo principale è garantire la massima protezione dei dati attraverso ro
 
 ---
 
-## ✨ Caratteristiche Principali
+##  Caratteristiche Principali
 
 - **Autenticazione Sicura**  
   Sblocco tramite biometria (impronta, volto) o PIN di fallback, richiesto all'avvio, dopo timeout di inattività e prima di accedere a contenuti sensibili.
@@ -27,13 +27,13 @@ L'obiettivo principale è garantire la massima protezione dei dati attraverso ro
 
 ---
 
-## 🛠 Tecnologie Utilizzate
+##  Tecnologie Utilizzate
 
 - **Linguaggio:** Java (versione 11)  
 - **IDE:** Android Studio  
 - **Architettura:** MVVM (Model-View-ViewModel) con Repository Pattern  
 
-### 📦 Componenti Android Jetpack
+###  Componenti Android Jetpack
 
 - `androidx.biometric` – Autenticazione biometrica  
 - `androidx.security.crypto` – EncryptedSharedPreferences e EncryptedFile  
@@ -41,14 +41,14 @@ L'obiettivo principale è garantire la massima protezione dei dati attraverso ro
 - `androidx.work` – Operazioni in background  
 - `androidx.documentfile` – Interazione sicura con file esterni  
 
-### 🔐 Altri Strumenti
+###  Altri Strumenti
 
 - **Crittografia Database:** `net.zetetic:android-database-sqlcipher`  
 - **Serializzazione JSON:** `com.google.code.gson`
 
 ---
 
-## 🧩 Architettura
+##  Architettura
 
 Il progetto segue il pattern **MVVM**, con una chiara separazione delle responsabilità:
 
@@ -66,7 +66,7 @@ Il progetto segue il pattern **MVVM**, con una chiara separazione delle responsa
 
 ---
 
-## 🛡️ Sicurezza al Centro
+##  Sicurezza al Centro
 
 SecureNotes è progettata con un approccio *privacy-first*, senza alcuna dipendenza da servizi cloud o tracciamenti. Tutti i dati restano sul dispositivo, completamente crittografati e sotto il controllo dell'utente.
 
