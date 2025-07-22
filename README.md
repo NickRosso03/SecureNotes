@@ -8,7 +8,7 @@ L'obiettivo principale è garantire la massima protezione dei dati attraverso ro
 ##  Caratteristiche Principali
 
 - **Autenticazione Sicura**  
-  Sblocco tramite biometria (impronta, volto) o PIN di fallback, richiesto all'avvio, dopo timeout di inattività e prima di accedere a contenuti sensibili.
+  Sblocco tramite biometria (impronta, volto) o PIN di fallback, richiesto all'avvio e dopo timeout di inattività.
 
 - **Crittografia Dati Locali End-to-End**  
   Tutte le note e i file sono crittografati con AES/GCM. Il database Room è ulteriormente protetto da SQLCipher (crittografia a livello di file). Le chiavi sono gestite in modo sicuro tramite Android Keystore.
